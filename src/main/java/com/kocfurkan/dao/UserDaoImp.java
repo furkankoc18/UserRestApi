@@ -1,8 +1,10 @@
 package com.kocfurkan.dao;
 
 import java.util.List;
+import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
@@ -14,15 +16,21 @@ import com.kocfurkan.repository.UserRepository;
 public class UserDaoImp implements UserDao {
 
 	@Autowired
-	UserRepository userRepository;
+	private UserRepository userRepository;
 	@Autowired
-	UserMailController userMail;
-
+	private UserMailController userMail;
+	@Autowired
+	private PasswordEncoder passwordEncoder;
+	
 	@Override
 	public String saveUser(User user) {
+		String activitionToken=UUID.randomUUID().toString();
+		user.setActivationToken(activitionToken);
 		user.setActive(false);
+		user.setPassword(passwordEncoder.encode(user.getPassword()));
 		userRepository.save(user);
 		userMail.newUserActivitionMail(user.getEmail());
+		System.out.println("user Password"+user.getPassword());
 		return "User Saving Success. User is disabled";
 	}
 
@@ -40,6 +48,7 @@ public class UserDaoImp implements UserDao {
 				findUser.setSurname(user.getSurname());
 				findUser.setRole(user.getRole());
 				findUser.setPassword(user.getEmail());
+				findUser.setActivationToken(user.getActivationToken());
 				i++;
 			}
 		}
