@@ -10,4 +10,5 @@ public interface UserDao {
 	String saveUser(User user);
 	Object getUserWithEmail(String email);
 	boolean isActivation(String token,String email);
+	String removeUser(Long userId);
 }

@@ -1,5 +1,6 @@
 package com.kocfurkan.dao;
 
+import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
@@ -28,6 +29,7 @@ public class UserDaoImp implements UserDao {
 		user.setActivationToken(activitionToken);
 		user.setActive(false);
 		user.setPassword(passwordEncoder.encode(user.getPassword()));
+		user.setCreatedDate(new Date());
 		userRepository.save(user);
 		userMail.newUserActivitionMail(user.getEmail());
 		System.out.println("user Password"+user.getPassword());
@@ -75,6 +77,30 @@ public class UserDaoImp implements UserDao {
 			user.setActive(true);
 			userRepository.save(user);
 			return true;
+		}
+	}
+
+	@Override
+	public String removeUser(Long userId) {
+
+		boolean isUserExists=userRepository.existsById(userId);
+		long userCount=userRepository.count();
+		if(isUserExists) {
+			User user=userRepository.findById(userId).get();
+			userRepository.delete(user);
+			if(userCount==userRepository.count()-1) {
+				return "Kullanici basarili bir sekilde silindi";
+			}else {
+				isUserExists=userRepository.existsById(userId);
+				if(isUserExists) {
+					return "Kullanici silme islemi gerceklesti ancak bu idye sahip kullanici duruyor";
+				}else {
+				//Kullanıcı Silinmiş ancak count düşmemiş
+					return "Bu idye sahip kullanici silindi ancak count dusmedi";
+				}
+			}
+		}else {
+			return userId+ "Kullanicisi bulunamadi";
 		}
 	}
 

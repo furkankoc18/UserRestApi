@@ -1,5 +1,7 @@
 package com.kocfurkan.entity;
 
+import java.util.Date;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -7,6 +9,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 
 @Entity
@@ -24,6 +28,9 @@ public class User {
 	@OneToOne(cascade = CascadeType.ALL)
 	private Role role;
 	private String activationToken;
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date createdDate;
+	
 	
 	public User() {
 	}
@@ -82,5 +89,11 @@ public class User {
 	}
 	public void setSurname(String surname) {
 		this.surname = surname;
+	}
+	public Date getCreatedDate() {
+		return createdDate;
+	}
+	public void setCreatedDate(Date createdDate) {
+		this.createdDate = createdDate;
 	}
 }

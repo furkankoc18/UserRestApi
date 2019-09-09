@@ -33,4 +33,9 @@ public class UserService {
 			return "User is activition failed";
 		}
 	}
+	
+	@RequestMapping(method = RequestMethod.POST, value = "/removeUser")
+	public String removeUser(@RequestParam long userId) {
+		return userDao.removeUser(userId);
+	}
 }

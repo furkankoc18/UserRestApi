@@ -1,6 +1,9 @@
 package com.kocfurkan.controller;
 
 
+import java.util.Properties;
+
+import org.jboss.jandex.Main;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
@@ -15,7 +18,7 @@ public class UserMailController {
 	@Autowired
 	private JavaMailSender javaMailSender;
 	@Autowired
-	private FileUtil fileUtil;
+	private Properties properties;
 	@Autowired
 	private UserDaoImp userDaoImp;
 
@@ -32,13 +35,12 @@ public class UserMailController {
 			}else {
 				// kullanıcı yok
 			}
-			String baseUrl = "http://localhost:" + fileUtil
-					.getPropertiesFile("C:/Users/Furkan/git/UserRestApi/src/main/resources/application.properties")
+			properties.load(getClass().getClassLoader().getResourceAsStream("application.properties"));
+			String baseUrl = "http://localhost:" + properties
 					.getProperty("server.port");
 			String path = "/userService/newUserActivition?param=";
 			String email = "furkankoc18@gmail.com";
 			mailMessage.setText(baseUrl + path + token + "&email=" + email);
-
 			javaMailSender.send(mailMessage);
 		} catch (Exception e) {
 			System.out.println("sendEmail Err => " + e.toString());
