@@ -49,7 +49,7 @@ public class UserDaoImp implements UserDao {
 				findUser.setName(user.getName());
 				findUser.setSurname(user.getSurname());
 				findUser.setRole(user.getRole());
-				findUser.setPassword(user.getEmail());
+				findUser.setPassword(user.getPassword());
 				findUser.setActivationToken(user.getActivationToken());
 				i++;
 			}
@@ -102,6 +102,12 @@ public class UserDaoImp implements UserDao {
 		}else {
 			return userId+ "Kullanicisi bulunamadi";
 		}
+	}
+
+	@Override
+	public boolean passwordMatches(String encodePassword,String password) {
+		boolean isTrue=passwordEncoder.matches(password, encodePassword);
+		return isTrue;
 	}
 
 }

@@ -17,6 +17,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         .antMatchers("/").permitAll()
         .antMatchers(HttpMethod.POST,"/userService/saveUser").permitAll()
         .antMatchers(HttpMethod.POST,"/userService/removeUser").permitAll()
+        .antMatchers(HttpMethod.POST,"/loginService/userLogin").permitAll()
         .antMatchers(HttpMethod.POST, "/login").permitAll()
         .antMatchers(HttpMethod.POST,"/newuser/*").permitAll()
         .antMatchers(HttpMethod.GET,"/userService/newUserActivition").permitAll()

@@ -11,4 +11,5 @@ public interface UserDao {
 	Object getUserWithEmail(String email);
 	boolean isActivation(String token,String email);
 	String removeUser(Long userId);
+	boolean passwordMatches(String encodePassword,String password);
 }
