@@ -5,3 +5,100 @@
 2020-01-14 09:40:38 INFO  UserApplication:20 - application is running
 2020-01-14 09:41:18 INFO  UserApplication:20 - application is running
 2020-01-14 09:41:18 INFO  UserApplication:20 - application is running
+2020-01-15 10:47:18 INFO  UserApplication:20 - application is running
+2020-01-15 10:47:18 INFO  UserApplication:20 - application is running
+2020-01-15 10:50:49 INFO  UserApplication:21 - application is running
+2020-01-15 10:50:50 INFO  UserApplication:21 - application is running
+2020-01-15 10:51:54 INFO  UserApplication:20 - application is running
+2020-01-15 10:51:54 INFO  UserApplication:20 - application is running
+2020-01-15 11:30:35 INFO  UserApplication:20 - application is running
+2020-01-15 11:30:36 INFO  UserApplication:20 - application is running
+2020-01-15 11:37:08 INFO  UserApplication:20 - application is running
+2020-01-15 11:37:08 INFO  UserApplication:20 - application is running
+2020-01-15 11:51:28 INFO  UserApplication:20 - application is running
+2020-01-15 11:51:29 INFO  UserApplication:20 - application is running
+2020-01-15 13:18:19 INFO  UserApplication:20 - application is running
+2020-01-15 13:18:20 INFO  UserApplication:20 - application is running
+2020-01-15 13:20:24 INFO  UserApplication:20 - application is running
+2020-01-15 13:20:50 INFO  UserApplication:20 - application is running
+2020-01-15 13:20:56 INFO  UserApplication:20 - application is running
+2020-01-15 13:20:56 INFO  UserApplication:20 - application is running
+2020-01-15 13:22:45 INFO  UserApplication:20 - application is running
+2020-01-15 13:22:45 INFO  UserApplication:20 - application is running
+2020-01-15 13:23:21 INFO  UserApplication:20 - application is running
+2020-01-15 13:24:01 INFO  UserApplication:20 - application is running
+2020-01-15 13:24:01 INFO  UserApplication:20 - application is running
+2020-01-15 13:26:43 INFO  UserApplication:20 - application is running
+2020-01-15 13:28:22 INFO  UserApplication:20 - application is running
+2020-01-15 13:28:22 INFO  UserApplication:20 - application is running
+2020-01-15 13:29:18 INFO  UserApplication:20 - application is running
+2020-01-15 13:29:18 INFO  UserApplication:20 - application is running
+2020-01-15 13:30:22 INFO  UserApplication:20 - application is running
+2020-01-15 13:30:25 INFO  UserApplication:20 - application is running
+2020-01-15 13:30:25 INFO  UserApplication:20 - application is running
+2020-01-15 13:47:05 INFO  UserApplication:20 - application is running
+2020-01-15 13:47:12 INFO  UserApplication:20 - application is running
+2020-01-15 13:47:48 INFO  UserApplication:20 - application is running
+2020-01-15 13:49:20 INFO  UserApplication:20 - application is running
+2020-01-15 13:50:23 INFO  UserApplication:20 - application is running
+2020-01-15 13:50:24 INFO  UserApplication:20 - application is running
+2020-01-15 14:35:47 INFO  UserApplication:20 - application is running
+2020-01-15 14:35:48 INFO  UserApplication:20 - application is running
+2020-01-15 14:44:14 INFO  UserApplication:21 - application is running
+2020-01-15 14:44:15 INFO  UserApplication:21 - application is running
+2020-01-16 09:37:11 INFO  UserApplication:21 - application is running
+2020-01-16 09:37:11 INFO  UserApplication:21 - application is running
+2020-01-16 09:39:58 INFO  UserApplication:21 - application is running
+2020-01-16 09:39:58 INFO  UserApplication:21 - application is running
+2020-01-16 09:42:07 INFO  UserDaoImp:95 - method begin-----> removeUser(userId) userId: 6
+2020-01-16 09:42:07 INFO  UserDaoImp:97 - isUserExists : false
+2020-01-16 09:42:21 INFO  UserApplication:21 - application is running
+2020-01-16 09:42:22 INFO  UserApplication:21 - application is running
+2020-01-16 09:43:07 INFO  UserDaoImp:95 - method begin-----> removeUser(userId) userId: 6
+2020-01-16 09:43:08 INFO  UserDaoImp:97 - isUserExists : false
+2020-01-16 09:43:10 INFO  UserDaoImp:95 - method begin-----> removeUser(userId) userId: 5
+2020-01-16 09:43:10 INFO  UserDaoImp:97 - isUserExists : true
+2020-01-16 09:44:33 INFO  UserApplication:21 - application is running
+2020-01-16 09:44:34 INFO  UserApplication:21 - application is running
+2020-01-16 09:44:59 INFO  UserDaoImp:95 - method begin-----> removeUser(userId) userId: 5
+2020-01-16 09:45:00 INFO  UserDaoImp:97 - isUserExists : false
+2020-01-16 09:45:27 INFO  UserApplication:21 - application is running
+2020-01-16 09:45:27 INFO  UserApplication:21 - application is running
+2020-01-16 09:59:19 INFO  UserApplication:21 - application is running
+2020-01-16 09:59:20 INFO  UserApplication:21 - application is running
+2020-01-16 10:01:11 INFO  UserApplication:21 - application is running
+2020-01-16 10:01:12 INFO  UserApplication:21 - application is running
+2020-01-16 10:16:56 INFO  UserApplication:21 - application is running
+2020-01-16 10:16:56 INFO  UserApplication:21 - application is running
+2020-01-16 10:17:43 INFO  UserApplication:21 - application is running
+2020-01-16 10:17:43 INFO  UserApplication:21 - application is running
+2020-01-16 10:19:49 INFO  UserApplication:21 - application is running
+2020-01-16 10:19:49 INFO  UserApplication:21 - application is running
+2020-01-16 11:04:36 INFO  UserApplication:21 - application is running
+2020-01-16 11:19:54 INFO  UserApplication:21 - application is running
+2020-01-16 11:19:54 INFO  UserApplication:21 - application is running
+2020-01-16 11:20:35 INFO  UserApplication:21 - application is running
+2020-01-16 11:21:31 INFO  UserApplication:21 - application is running
+2020-01-16 11:22:39 INFO  UserApplication:21 - application is running
+2020-01-16 11:23:44 INFO  UserApplication:21 - application is running
+2020-01-16 13:43:07 INFO  UserDaoImp:31 - method begin-----> saveUser(user) user.idnull
+2020-01-16 13:43:07 INFO  UserDaoImp:38 - user is saved. userId: 7
+2020-01-16 13:43:07 INFO  UserMailController:28 - method begin-----> newUserActivitionMail(toEmail) toEmail : test18@gmail.com
+2020-01-16 13:43:07 INFO  UserDaoImp:46 - method begin-----> getUserWithEmail(email) email: test18@gmail.com
+2020-01-16 13:43:07 INFO  UserDaoImp:67 - user is found --> id :7
+2020-01-16 13:43:07 INFO  UserMailController:41 - application.properties file setted
+2020-01-16 13:43:07 INFO  UserMailController:46 - mailmessage text : http://localhost:8081/userService/newUserActivition?param=8b20b3ce-4ad1-4563-bed5-2345be183c6a&email=furkankoc18@gmail.com
+2020-01-16 13:43:07 INFO  UserMailController:47 - mail sending...
+2020-01-16 13:43:21 INFO  UserMailController:49 - mail sended
+2020-01-16 13:52:30 INFO  UserApplication:21 - application is running
+2020-01-16 14:00:31 INFO  UserApplication:21 - application is running
+2020-01-16 14:00:31 INFO  UserApplication:21 - application is running
+2020-01-16 14:08:06 INFO  UserApplication:21 - application is running
+2020-01-16 14:08:07 INFO  UserApplication:21 - application is running
+2020-01-16 14:10:43 INFO  UserApplication:21 - application is running
+2020-01-16 14:10:43 INFO  UserApplication:21 - application is running
+2020-01-16 15:27:29 INFO  UserDaoImp:95 - method begin-----> removeUser(userId) userId: 122
+2020-01-16 15:27:29 INFO  UserDaoImp:97 - isUserExists : false
+2020-01-16 15:28:40 INFO  UserApplication:21 - application is running
+2020-01-16 15:30:08 INFO  UserApplication:21 - application is running
+2020-01-16 15:30:09 INFO  UserApplication:21 - application is running

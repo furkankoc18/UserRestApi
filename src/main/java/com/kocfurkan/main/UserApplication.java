@@ -8,6 +8,7 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
+
 @EntityScan(basePackages = {"com.kocfurkan.entity"})  
 @EnableJpaRepositories("com.kocfurkan.repository")
 @ComponentScan(basePackages = {"com.kocfurkan"})

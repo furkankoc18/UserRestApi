@@ -111,7 +111,7 @@ public class UserDaoImp implements UserDao {
 				}
 			}
 		} else {
-			return userId + "Kullanicisi bulunamadi";
+			return userId + " Kullanicisi bulunamadi";
 		}
 	}
 
