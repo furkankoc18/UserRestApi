@@ -87,7 +87,7 @@ public class UserDaoImp implements UserDao {
 			User user = (User) getUserWithEmail(email);
 			user.setActive(true);
 			userRepository.save(user);
-			logger.info("User is active userId :"+user.getId());
+			logger.info("User is active userId :" + user.getId());
 			return true;
 		}
 	}

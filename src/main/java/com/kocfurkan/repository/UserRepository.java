@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import com.kocfurkan.entity.User;
 
 @Repository
-@Component
+//@Component
 public interface UserRepository extends CrudRepository<User, Long>{
 	
 }

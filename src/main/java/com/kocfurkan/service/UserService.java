@@ -1,5 +1,6 @@
 package com.kocfurkan.service;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -15,6 +16,7 @@ import com.kocfurkan.entity.User;
 @RequestMapping("/userService")
 public class UserService {
 
+	
 	@Autowired
 	UserDaoImp userDao;
 
