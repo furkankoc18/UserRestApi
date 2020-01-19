@@ -1,6 +1,5 @@
 package com.kocfurkan.service;
 
-import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -47,12 +46,12 @@ public class UserService {
 			@ApiResponse(code = 403, message = "New user activation is forbidden"),
 			@ApiResponse(code = 404, message = "newUserActivition endpoint isn't found"),
 	})
-	public String newUserActivition(@RequestParam String param, @RequestParam String email) {
+	public ResponseEntity<String> newUserActivition(@RequestParam String param, @RequestParam String email) {
 		boolean isActive = userDao.isActivation(param, email);
 		if (isActive) {
-			return "User is activition success";
+			return ResponseEntity.ok("User is activition success");
 		} else {
-			return "User is activition failed";
+			return ResponseEntity.ok("User is activition failed");
 		}
 	}
 
@@ -64,7 +63,7 @@ public class UserService {
 			@ApiResponse(code = 403, message = "User remove is forbidden"),
 			@ApiResponse(code = 404, message = "removeUser endpoint isn't found"),
 	})
-	public String removeUser(@RequestParam long userId) {
-		return userDao.removeUser(userId);
+	public ResponseEntity<String> removeUser(@RequestParam long userId) {
+		return ResponseEntity.ok(userDao.removeUser(userId));
 	}
 }

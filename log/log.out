@@ -1,0 +1,73 @@
+2020-01-19 21:20:41 INFO  UserApplication:21 - application is running
+2020-01-19 21:20:41 INFO  UserApplication:21 - application is running
+2020-01-19 21:25:22 INFO  UserApplication:21 - application is running
+2020-01-19 21:25:29 INFO  UserApplication:21 - application is running
+2020-01-19 21:25:38 INFO  UserApplication:21 - application is running
+2020-01-19 21:26:27 INFO  UserDaoImp:31 - method begin-----> saveUser(user) user.idnull
+2020-01-19 21:26:28 INFO  UserDaoImp:38 - user is saved. userId: 2
+2020-01-19 21:26:28 INFO  UserMailController:28 - method begin-----> newUserActivitionMail(toEmail) toEmail : furkankoc18@gmail.com
+2020-01-19 21:26:28 INFO  UserDaoImp:46 - method begin-----> getUserWithEmail(email) email: furkankoc18@gmail.com
+2020-01-19 21:26:28 INFO  UserDaoImp:67 - user is found --> id :2
+2020-01-19 21:26:28 INFO  UserMailController:41 - application.properties file setted
+2020-01-19 21:26:28 INFO  UserMailController:46 - mailmessage text : http://localhost:8081/userService/newUserActivition?param=e455ee3d-71e2-42a6-9c52-1971059cdebc&email=furkankoc18@gmail.com
+2020-01-19 21:26:28 INFO  UserMailController:47 - mail sending...
+2020-01-19 21:26:30 ERROR UserMailController:52 - newUserActivitionMail exception e: org.springframework.mail.MailSendException: Mail server connection failed; nested exception is javax.mail.MessagingException: Could not convert socket to TLS;
+  nested exception is:
+	javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target. Failed messages: javax.mail.MessagingException: Could not convert socket to TLS;
+  nested exception is:
+	javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target; message exceptions (1) are:
+Failed message 1: javax.mail.MessagingException: Could not convert socket to TLS;
+  nested exception is:
+	javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+2020-01-19 21:29:17 INFO  UserDaoImp:31 - method begin-----> saveUser(user) user.idnull
+2020-01-19 21:29:17 INFO  UserDaoImp:38 - user is saved. userId: 3
+2020-01-19 21:29:17 INFO  UserMailController:28 - method begin-----> newUserActivitionMail(toEmail) toEmail : furkankoc18@gmail.com
+2020-01-19 21:29:17 INFO  UserDaoImp:46 - method begin-----> getUserWithEmail(email) email: furkankoc18@gmail.com
+2020-01-19 21:29:17 INFO  UserDaoImp:67 - user is found --> id :3
+2020-01-19 21:29:17 INFO  UserMailController:41 - application.properties file setted
+2020-01-19 21:29:17 INFO  UserMailController:46 - mailmessage text : http://localhost:8081/userService/newUserActivition?param=4044abfe-e90b-4271-b687-9acb877837a1&email=furkankoc18@gmail.com
+2020-01-19 21:29:17 INFO  UserMailController:47 - mail sending...
+2020-01-19 21:29:20 INFO  UserMailController:49 - mail sended
+2020-01-19 21:29:30 INFO  UserDaoImp:74 - method begin-----> isActivation(token,email) email: furkankoc18@gmail.com
+2020-01-19 21:29:30 INFO  UserDaoImp:46 - method begin-----> getUserWithEmail(email) email: furkankoc18@gmail.com
+2020-01-19 21:29:30 INFO  UserDaoImp:67 - user is found --> id :3
+2020-01-19 21:29:30 INFO  UserDaoImp:88 - User is active userId :3
+2020-01-19 21:29:56 INFO  UserApplication:21 - application is running
+2020-01-19 21:30:08 INFO  UserApplication:21 - application is running
+2020-01-19 21:30:08 INFO  UserApplication:21 - application is running
+2020-01-19 21:31:29 INFO  UserApplication:21 - application is running
+2020-01-19 21:31:30 INFO  UserApplication:21 - application is running
+2020-01-19 21:34:00 INFO  UserApplication:21 - application is running
+2020-01-19 21:34:01 INFO  UserApplication:21 - application is running
+2020-01-19 21:35:23 INFO  UserApplication:21 - application is running
+2020-01-19 21:35:24 INFO  UserApplication:21 - application is running
+2020-01-19 21:38:12 INFO  UserApplication:21 - application is running
+2020-01-19 21:38:13 INFO  UserApplication:21 - application is running
+2020-01-19 21:40:59 INFO  UserApplication:21 - application is running
+2020-01-19 21:41:10 INFO  UserApplication:21 - application is running
+2020-01-19 21:41:10 INFO  UserApplication:21 - application is running
+2020-01-19 21:43:26 INFO  UserApplication:21 - application is running
+2020-01-19 21:43:29 INFO  UserApplication:21 - application is running
+2020-01-19 21:43:30 INFO  UserApplication:21 - application is running
+2020-01-19 21:44:08 INFO  UserApplication:21 - application is running
+2020-01-19 21:44:08 INFO  UserApplication:21 - application is running
+2020-01-19 21:54:55 INFO  UserApplication:21 - application is running
+2020-01-19 21:54:56 INFO  UserApplication:21 - application is running
+2020-01-19 21:58:43 INFO  UserApplication:21 - application is running
+2020-01-19 21:58:44 INFO  UserApplication:21 - application is running
+2020-01-19 22:02:45 INFO  UserApplication:21 - application is running
+2020-01-19 22:04:00 INFO  UserApplication:21 - application is running
+2020-01-19 22:04:28 INFO  UserApplication:21 - application is running
+2020-01-19 22:04:47 INFO  UserApplication:21 - application is running
+2020-01-19 22:04:51 INFO  UserApplication:21 - application is running
+2020-01-19 22:04:51 INFO  UserApplication:21 - application is running
+2020-01-19 22:05:49 INFO  UserApplication:21 - application is running
+2020-01-19 22:05:50 INFO  UserApplication:21 - application is running
+2020-01-19 22:07:36 INFO  UserApplication:21 - application is running
+2020-01-19 22:07:36 INFO  UserApplication:21 - application is running
+2020-01-19 22:09:54 INFO  UserApplication:21 - application is running
+2020-01-19 22:09:54 INFO  UserApplication:21 - application is running
+2020-01-19 22:15:41 INFO  UserApplication:21 - application is running
+2020-01-19 22:15:41 INFO  UserApplication:21 - application is running
+2020-01-19 22:16:21 INFO  UserApplication:21 - application is running
+2020-01-19 22:16:21 INFO  UserApplication:21 - application is running
