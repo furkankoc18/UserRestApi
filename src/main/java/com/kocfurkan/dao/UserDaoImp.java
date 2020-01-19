@@ -1,7 +1,5 @@
 package com.kocfurkan.dao;
 
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.log;
-
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
@@ -113,7 +111,7 @@ public class UserDaoImp implements UserDao {
 				}
 			}
 		} else {
-			return userId + "Kullanicisi bulunamadi";
+			return userId + " Kullanicisi bulunamadi";
 		}
 	}
 

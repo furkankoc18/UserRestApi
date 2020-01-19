@@ -14,4 +14,6 @@ Kullanıcı işlemlerinin(CRUD) gerçekleştirilebildiği backend proje.
  - Spring Security
  - Spring Web Services
  - Spring Boot
+ - Swagger UI
+ - JWT
  - ...
