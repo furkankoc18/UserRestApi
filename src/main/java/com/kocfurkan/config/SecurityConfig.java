@@ -16,15 +16,21 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		// http.csrf().disable().authorizeRequests().anyRequest().authenticated().and().httpBasic();
-		http.csrf().disable().authorizeRequests().anyRequest().authenticated().and().httpBasic();
+		http.httpBasic().and().authorizeRequests().anyRequest().authenticated().and().csrf().disable();
 	}
 
 	@Autowired
-	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-		//auth.inMemoryAuthentication().withUser("admin").password(passwordEncoder().encode("nimda")).authorities("ROLE_USER");
-
+	public void configureAuthGlobal(AuthenticationManagerBuilder auth) {
+		try {
+			auth.inMemoryAuthentication().withUser("user").password(passwordEncoder().encode("user")).roles("USER")
+					.and().withUser("admin").password(passwordEncoder().encode("admin")).roles("ADMIN");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
-	
+	@Bean
+	public PasswordEncoder passwordEncoder() {
+		return new BCryptPasswordEncoder();
+	}
 }
