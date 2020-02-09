@@ -19,23 +19,18 @@ public class Role {
 	private Long id;
 	private String roleName;
 	@JsonIgnore
-	private boolean isActive;
+	private boolean status;
 	
 	public Role() {
 	}
-	
-	public Role(String roleName,boolean isActive) {
-		this.roleName=roleName;
-		this.isActive=isActive;
+	public Role(Long id, String roleName, boolean status) {
+		this.id = id;
+		this.roleName = roleName;
+		this.status = status;
 	}
-	
+
+
 	// Getters and Setters
-	public boolean isActive() {
-		return isActive;
-	}
-	public void setActive(boolean isActive) {
-		this.isActive = isActive;
-	}
 	public Long getId() {
 		return id;
 	}
@@ -47,5 +42,11 @@ public class Role {
 	}
 	public void setRoleName(String roleName) {
 		this.roleName = roleName;
+	}
+	public boolean isStatus() {
+		return status;
+	}
+	public void setStatus(boolean status) {
+		this.status = status;
 	}	
 }

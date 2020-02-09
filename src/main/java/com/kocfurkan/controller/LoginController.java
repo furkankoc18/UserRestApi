@@ -27,7 +27,7 @@ public class LoginController {
 		if (object instanceof User) {
 			User user = (User) object;
 			if (userDao.passwordMatches(user.getPassword(), login.getPassword())) {
-				if (user.isActive()) {
+				if (user.isStatus()) {
 					logger.info("user logged in userEmail: " + login.getEmail());
 
 					Algorithm algorithm = Algorithm.HMAC256("secret");

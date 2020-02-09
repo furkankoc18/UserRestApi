@@ -1,6 +1,8 @@
 package com.kocfurkan.dao;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
 import java.util.UUID;
 
@@ -11,6 +13,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import com.kocfurkan.controller.UserMailController;
+import com.kocfurkan.entity.Role;
 import com.kocfurkan.entity.User;
 import com.kocfurkan.repository.UserRepository;
 
@@ -31,7 +34,7 @@ public class UserDaoImp implements UserDao {
 		logger.info("method begin-----> saveUser(user) user.id" + user.getId());
 		String activitionToken = UUID.randomUUID().toString();
 		user.setActivationToken(activitionToken);
-		user.setActive(false);
+		user.setStatus(false);
 		user.setPassword(passwordEncoder.encode(user.getPassword()));
 		user.setCreatedDate(new Date());
 		userRepository.save(user);
@@ -49,7 +52,7 @@ public class UserDaoImp implements UserDao {
 		int i = 0;
 		for (User user : allUser) {
 			if (user.getEmail().equals(email)) {
-				findUser.setActive(user.isActive());
+				findUser.setStatus(user.isStatus());
 				findUser.setEmail(user.getEmail());
 				findUser.setId(user.getId());
 				findUser.setName(user.getName());
@@ -83,7 +86,7 @@ public class UserDaoImp implements UserDao {
 			return false;
 		} else {
 			User user = (User) getUserWithEmail(email);
-			user.setActive(true);
+			user.setStatus(true);
 			userRepository.save(user);
 			logger.info("User is active userId :" + user.getId());
 			return true;
@@ -91,7 +94,7 @@ public class UserDaoImp implements UserDao {
 	}
 
 	@Override
-	public String removeUser(Long userId) {
+	public String removeUserById(Long userId) {
 		logger.info("method begin-----> removeUser(userId) userId: " + userId);
 		boolean isUserExists = userRepository.existsById(userId);
 		logger.info("isUserExists : " + isUserExists);
@@ -119,6 +122,41 @@ public class UserDaoImp implements UserDao {
 	public boolean passwordMatches(String encodePassword, String password) {
 		boolean isTrue = passwordEncoder.matches(password, encodePassword);
 		return isTrue;
+	}
+
+	@Override
+	public List<User> getAllUser() {
+		List<User>users=new ArrayList<>();
+		for (Iterator<User> i = userRepository.findAll().iterator(); i.hasNext(); ) {
+		    User user= (User) i.next();
+		    users.add(user);
+		}
+		
+		return users;
+	}
+
+	@Override
+	public String removeUserByEmail(String email) {
+		userRepository.removeByEmail(email);
+		return "silindi";
+	}
+
+	@Override
+	public List<User> getUserListByRole(Role role) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public User getUserById(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public User getUserByEmail(String email) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

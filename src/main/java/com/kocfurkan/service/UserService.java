@@ -1,5 +1,7 @@
 package com.kocfurkan.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -64,6 +66,30 @@ public class UserService {
 			@ApiResponse(code = 404, message = "removeUser endpoint isn't found"),
 	})
 	public ResponseEntity<String> removeUser(@RequestParam long userId) {
-		return ResponseEntity.ok(userDao.removeUser(userId));
+		return ResponseEntity.ok(userDao.removeUserById(userId));
+	}
+	
+	@RequestMapping(method= RequestMethod.GET, value="/getAllUser")
+	@ApiOperation(value="This endpoint returns all user list")
+	@ApiResponses(value = {
+			@ApiResponse(code = 200, message = "Users return is successfuly"),
+			@ApiResponse(code = 401, message = "Users return is unauthorized"),
+			@ApiResponse(code = 403, message = "Users return is forbidden"),
+			@ApiResponse(code = 404, message = "getAllUser endpoint isn't found"),
+	})
+	public ResponseEntity<List<User>>getAllUser(){
+		return ResponseEntity.ok(userDao.getAllUser());
+	}
+	
+	@RequestMapping(method= RequestMethod.POST, value="/removeUserByEmail")
+	@ApiOperation(value = "This endpoint removes user by email")
+	@ApiResponses(value = {
+			@ApiResponse(code = 200, message = "User remove is successfuly"),
+			@ApiResponse(code = 401, message = "User remove is unauthorized"),
+			@ApiResponse(code = 403, message = "User remove is forbidden"),
+			@ApiResponse(code = 404, message = "removeUserByEmail endpoint isn't found"),
+	})
+	public ResponseEntity<String>removeUserByEmail(@RequestParam String email){
+		return ResponseEntity.ok(userDao.removeUserByEmail(email));
 	}
 }

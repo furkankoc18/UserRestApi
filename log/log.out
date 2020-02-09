@@ -124,3 +124,112 @@ Failed message 1: javax.mail.MessagingException: Could not convert socket to TLS
 2020-01-25 14:50:09 INFO  UserDaoImp:88 - User is active userId :5
 2020-01-25 14:52:58 INFO  UserApplication:21 - application is running
 2020-01-25 14:52:58 INFO  UserApplication:21 - application is running
+2020-02-09 15:03:56 INFO  UserApplication:21 - application is running
+2020-02-09 15:03:59 INFO  UserApplication:21 - application is running
+2020-02-09 15:29:51 INFO  UserDaoImp:31 - method begin-----> saveUser(user) user.idnull
+2020-02-09 15:29:52 INFO  UserDaoImp:38 - user is saved. userId: 6
+2020-02-09 15:29:52 INFO  UserMailController:28 - method begin-----> newUserActivitionMail(toEmail) toEmail : furkankoc18@gmail.com
+2020-02-09 15:29:52 INFO  UserDaoImp:46 - method begin-----> getUserWithEmail(email) email: furkankoc18@gmail.com
+2020-02-09 15:29:52 INFO  UserDaoImp:67 - user is found --> id :6
+2020-02-09 15:29:52 INFO  UserMailController:41 - application.properties file setted
+2020-02-09 15:29:52 INFO  UserMailController:46 - mailmessage text : http://localhost:8081/userService/newUserActivition?param=631232d4-8dca-4908-bc86-50a014cc5c31&email=furkankoc18@gmail.com
+2020-02-09 15:29:52 INFO  UserMailController:47 - mail sending...
+2020-02-09 15:29:55 INFO  UserMailController:49 - mail sended
+2020-02-09 15:30:29 INFO  UserDaoImp:31 - method begin-----> saveUser(user) user.idnull
+2020-02-09 15:30:29 INFO  UserDaoImp:38 - user is saved. userId: 7
+2020-02-09 15:30:29 INFO  UserMailController:28 - method begin-----> newUserActivitionMail(toEmail) toEmail : furkankoc18@gmail.com
+2020-02-09 15:30:29 INFO  UserDaoImp:46 - method begin-----> getUserWithEmail(email) email: furkankoc18@gmail.com
+2020-02-09 15:30:29 INFO  UserDaoImp:67 - user is found --> id :7
+2020-02-09 15:30:29 INFO  UserMailController:41 - application.properties file setted
+2020-02-09 15:30:29 INFO  UserMailController:46 - mailmessage text : http://localhost:8081/userService/newUserActivition?param=292b2334-ac11-4218-8257-69a379348453&email=furkankoc18@gmail.com
+2020-02-09 15:30:29 INFO  UserMailController:47 - mail sending...
+2020-02-09 15:30:32 INFO  UserMailController:49 - mail sended
+2020-02-09 15:30:57 INFO  UserDaoImp:31 - method begin-----> saveUser(user) user.idnull
+2020-02-09 15:30:57 INFO  UserDaoImp:38 - user is saved. userId: 8
+2020-02-09 15:30:57 INFO  UserMailController:28 - method begin-----> newUserActivitionMail(toEmail) toEmail : furkankoc18@gmail.com
+2020-02-09 15:30:57 INFO  UserDaoImp:46 - method begin-----> getUserWithEmail(email) email: furkankoc18@gmail.com
+2020-02-09 15:30:57 INFO  UserDaoImp:67 - user is found --> id :8
+2020-02-09 15:30:57 INFO  UserMailController:41 - application.properties file setted
+2020-02-09 15:30:57 INFO  UserMailController:46 - mailmessage text : http://localhost:8081/userService/newUserActivition?param=142fd4bb-99eb-40a5-a89c-5cfd7b2483d5&email=furkankoc18@gmail.com
+2020-02-09 15:30:57 INFO  UserMailController:47 - mail sending...
+2020-02-09 15:30:59 INFO  UserMailController:49 - mail sended
+2020-02-09 15:31:37 INFO  UserDaoImp:74 - method begin-----> isActivation(token,email) email: furkankoc18@gmail.com
+2020-02-09 15:31:38 INFO  UserDaoImp:46 - method begin-----> getUserWithEmail(email) email: furkankoc18@gmail.com
+2020-02-09 15:31:38 INFO  UserDaoImp:67 - user is found --> id :8
+2020-02-09 15:31:38 INFO  UserDaoImp:88 - User is active userId :8
+2020-02-09 15:31:40 INFO  UserDaoImp:74 - method begin-----> isActivation(token,email) email: furkankoc18@gmail.com
+2020-02-09 15:32:28 INFO  LoginController:25 - method begin-----> userLogin()
+2020-02-09 15:32:28 INFO  UserDaoImp:46 - method begin-----> getUserWithEmail(email) email: furkankoc18@gmail.com
+2020-02-09 15:32:28 INFO  UserDaoImp:67 - user is found --> id :8
+2020-02-09 15:32:28 INFO  LoginController:31 - user logged in userEmail: furkankoc18@gmail.com
+2020-02-09 15:32:28 INFO  LoginController:37 - User email : furkankoc18@gmail.com Token : eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyTG9naW4iLCJwYXNzd29yZCI6IjE5OTYxOTAzIiwiaXNzIjoiZnVya2Fua29jMThAZ21haWwuY29tIiwiaWF0IjoxNTgxMjUxNTQ4LCJlbWFpbCI6ImZ1cmthbmtvYzE4QGdtYWlsLmNvbSJ9.rZcrz7_TEC0t3h-cVZD61-O2LSJU2vez7PnlcmJEBNk
+2020-02-09 15:46:30 INFO  UserApplication:21 - application is running
+2020-02-09 15:46:31 INFO  UserApplication:21 - application is running
+2020-02-09 15:48:06 INFO  UserApplication:21 - application is running
+2020-02-09 15:48:33 INFO  UserApplication:21 - application is running
+2020-02-09 15:48:34 INFO  UserApplication:21 - application is running
+2020-02-09 15:50:31 INFO  UserDaoImp:31 - method begin-----> saveUser(user) user.idnull
+2020-02-09 15:50:31 INFO  UserDaoImp:38 - user is saved. userId: 9
+2020-02-09 15:50:31 INFO  UserMailController:28 - method begin-----> newUserActivitionMail(toEmail) toEmail : test@gmail.com
+2020-02-09 15:50:31 INFO  UserDaoImp:46 - method begin-----> getUserWithEmail(email) email: test@gmail.com
+2020-02-09 15:50:31 INFO  UserDaoImp:67 - user is found --> id :9
+2020-02-09 15:50:31 INFO  UserMailController:41 - application.properties file setted
+2020-02-09 15:50:31 INFO  UserMailController:46 - mailmessage text : http://localhost:8081/userService/newUserActivition?param=9131edbe-aaf6-43e8-aff2-efcfcf515672&email=furkankoc18@gmail.com
+2020-02-09 15:50:31 INFO  UserMailController:47 - mail sending...
+2020-02-09 15:50:35 INFO  UserMailController:49 - mail sended
+2020-02-09 15:53:48 INFO  UserApplication:21 - application is running
+2020-02-09 15:54:32 INFO  UserApplication:21 - application is running
+2020-02-09 15:54:44 INFO  UserApplication:21 - application is running
+2020-02-09 15:54:53 INFO  UserApplication:21 - application is running
+2020-02-09 15:55:10 INFO  UserApplication:21 - application is running
+2020-02-09 15:55:27 INFO  UserApplication:21 - application is running
+2020-02-09 15:55:27 INFO  UserApplication:21 - application is running
+2020-02-09 16:10:13 INFO  UserApplication:21 - application is running
+2020-02-09 16:10:13 INFO  UserApplication:21 - application is running
+2020-02-09 16:16:29 INFO  UserApplication:21 - application is running
+2020-02-09 16:20:00 INFO  UserApplication:21 - application is running
+2020-02-09 16:20:04 INFO  UserApplication:21 - application is running
+2020-02-09 16:20:04 INFO  UserApplication:21 - application is running
+2020-02-09 16:21:04 INFO  UserApplication:21 - application is running
+2020-02-09 16:21:17 INFO  UserApplication:21 - application is running
+2020-02-09 16:21:23 INFO  UserApplication:21 - application is running
+2020-02-09 16:21:31 INFO  UserApplication:21 - application is running
+2020-02-09 16:21:41 INFO  UserApplication:21 - application is running
+2020-02-09 16:23:35 INFO  UserApplication:21 - application is running
+2020-02-09 16:23:35 INFO  UserApplication:21 - application is running
+2020-02-09 16:24:56 INFO  UserApplication:21 - application is running
+2020-02-09 16:25:01 INFO  UserApplication:21 - application is running
+2020-02-09 16:25:06 INFO  UserApplication:21 - application is running
+2020-02-09 16:25:11 INFO  UserApplication:21 - application is running
+2020-02-09 16:25:16 INFO  UserApplication:21 - application is running
+2020-02-09 16:25:22 INFO  UserApplication:21 - application is running
+2020-02-09 16:25:27 INFO  UserApplication:21 - application is running
+2020-02-09 16:25:36 INFO  UserApplication:21 - application is running
+2020-02-09 16:25:51 INFO  UserApplication:21 - application is running
+2020-02-09 16:25:52 INFO  UserApplication:21 - application is running
+2020-02-09 17:30:08 INFO  UserApplication:21 - application is running
+2020-02-09 17:30:20 INFO  UserApplication:21 - application is running
+2020-02-09 17:30:31 INFO  UserApplication:21 - application is running
+2020-02-09 17:30:57 INFO  UserApplication:21 - application is running
+2020-02-09 17:31:35 INFO  UserApplication:21 - application is running
+2020-02-09 17:32:13 INFO  UserApplication:21 - application is running
+2020-02-09 17:32:52 INFO  UserApplication:21 - application is running
+2020-02-09 17:33:14 INFO  UserApplication:21 - application is running
+2020-02-09 17:40:43 INFO  UserApplication:21 - application is running
+2020-02-09 17:41:12 INFO  UserApplication:21 - application is running
+2020-02-09 17:41:21 INFO  UserApplication:21 - application is running
+2020-02-09 17:41:29 INFO  UserApplication:21 - application is running
+2020-02-09 17:42:32 INFO  UserApplication:21 - application is running
+2020-02-09 17:44:17 INFO  UserApplication:21 - application is running
+2020-02-09 17:44:17 INFO  UserApplication:21 - application is running
+2020-02-09 18:48:43 INFO  UserApplication:21 - application is running
+2020-02-09 18:48:56 INFO  UserApplication:21 - application is running
+2020-02-09 18:49:20 INFO  UserApplication:21 - application is running
+2020-02-09 18:49:21 INFO  UserApplication:21 - application is running
+2020-02-09 18:52:27 INFO  UserApplication:21 - application is running
+2020-02-09 18:52:40 INFO  UserApplication:21 - application is running
+2020-02-09 18:52:41 INFO  UserApplication:21 - application is running
+2020-02-09 18:54:33 INFO  UserApplication:21 - application is running
+2020-02-09 18:54:34 INFO  UserApplication:21 - application is running
+2020-02-09 18:56:24 INFO  UserApplication:21 - application is running
+2020-02-09 18:56:29 INFO  UserApplication:21 - application is running
