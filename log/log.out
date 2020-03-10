@@ -1,0 +1,105 @@
+2020-03-07 13:59:16 INFO  UserApplication:21 - application is running
+2020-03-07 13:59:17 INFO  UserApplication:21 - application is running
+2020-03-07 14:01:12 INFO  UserDaoImp:34 - method begin-----> saveUser(user) user.idnull
+2020-03-07 14:03:40 INFO  UserApplication:21 - application is running
+2020-03-07 14:03:41 INFO  UserApplication:21 - application is running
+2020-03-07 14:05:01 INFO  UserDaoImp:34 - method begin-----> saveUser(user) user.idnull
+2020-03-07 14:05:02 INFO  UserDaoImp:41 - user is saved. userId: 2
+2020-03-07 14:05:02 INFO  UserMailController:28 - method begin-----> newUserActivitionMail(toEmail) toEmail : string
+2020-03-07 14:05:02 INFO  UserDaoImp:49 - method begin-----> getUserWithEmail(email) email: string
+2020-03-07 14:05:02 INFO  UserDaoImp:70 - user is found --> id :2
+2020-03-07 14:05:02 INFO  UserMailController:41 - application.properties file setted
+2020-03-07 14:05:02 INFO  UserMailController:46 - mailmessage text : http://localhost:8081/userService/newUserActivition?param=d4f6d798-9e79-43fa-bcdc-a768ed0a9aea&email=furkankoc18@gmail.com
+2020-03-07 14:05:02 INFO  UserMailController:47 - mail sending...
+2020-03-07 14:05:06 ERROR UserMailController:52 - newUserActivitionMail exception e: org.springframework.mail.MailSendException: Mail server connection failed; nested exception is javax.mail.MessagingException: Could not convert socket to TLS;
+  nested exception is:
+	javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target. Failed messages: javax.mail.MessagingException: Could not convert socket to TLS;
+  nested exception is:
+	javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target; message exceptions (1) are:
+Failed message 1: javax.mail.MessagingException: Could not convert socket to TLS;
+  nested exception is:
+	javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+2020-03-07 14:06:40 INFO  UserApplication:21 - application is running
+2020-03-07 14:10:02 INFO  UserApplication:21 - application is running
+2020-03-07 14:10:43 INFO  UserApplication:21 - application is running
+2020-03-07 14:11:05 INFO  UserDaoImp:34 - method begin-----> saveUser(user) user.idnull
+2020-03-07 14:11:05 INFO  UserDaoImp:41 - user is saved. userId: 3
+2020-03-07 14:11:05 INFO  UserMailController:28 - method begin-----> newUserActivitionMail(toEmail) toEmail : string
+2020-03-07 14:11:05 INFO  UserDaoImp:49 - method begin-----> getUserWithEmail(email) email: string
+2020-03-07 14:11:05 INFO  UserDaoImp:70 - user is found --> id :3
+2020-03-07 14:11:05 INFO  UserMailController:41 - application.properties file setted
+2020-03-07 14:11:05 INFO  UserMailController:46 - mailmessage text : http://localhost:8081/userService/newUserActivition?param=4edc5992-81b6-4b7c-8efb-29ce366a70c7&email=furkankoc18@gmail.com
+2020-03-07 14:11:05 INFO  UserMailController:47 - mail sending...
+2020-03-07 14:11:06 ERROR UserMailController:52 - newUserActivitionMail exception e: org.springframework.mail.MailSendException: Mail server connection failed; nested exception is javax.mail.MessagingException: Could not convert socket to TLS;
+  nested exception is:
+	javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target. Failed messages: javax.mail.MessagingException: Could not convert socket to TLS;
+  nested exception is:
+	javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target; message exceptions (1) are:
+Failed message 1: javax.mail.MessagingException: Could not convert socket to TLS;
+  nested exception is:
+	javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+2020-03-07 14:11:26 INFO  UserApplication:21 - application is running
+2020-03-07 14:11:42 INFO  UserApplication:21 - application is running
+2020-03-07 14:26:40 INFO  UserApplication:21 - application is running
+2020-03-07 14:27:24 INFO  UserDaoImp:34 - method begin-----> saveUser(user) user.idnull
+2020-03-07 14:27:24 INFO  UserDaoImp:41 - user is saved. userId: 4
+2020-03-07 14:27:24 INFO  UserMailController:28 - method begin-----> newUserActivitionMail(toEmail) toEmail : string
+2020-03-07 14:27:24 INFO  UserDaoImp:49 - method begin-----> getUserWithEmail(email) email: string
+2020-03-07 14:27:24 INFO  UserDaoImp:70 - user is found --> id :4
+2020-03-07 14:27:24 INFO  UserMailController:41 - application.properties file setted
+2020-03-07 14:27:24 INFO  UserMailController:46 - mailmessage text : http://localhost:8081/userService/newUserActivition?param=a21182a4-51bc-4b43-97e4-eaad5a029363&email=furkankoc18@gmail.com
+2020-03-07 14:27:24 INFO  UserMailController:47 - mail sending...
+2020-03-07 14:27:25 ERROR UserMailController:52 - newUserActivitionMail exception e: org.springframework.mail.MailSendException: Mail server connection failed; nested exception is javax.mail.MessagingException: Could not convert socket to TLS;
+  nested exception is:
+	javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target. Failed messages: javax.mail.MessagingException: Could not convert socket to TLS;
+  nested exception is:
+	javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target; message exceptions (1) are:
+Failed message 1: javax.mail.MessagingException: Could not convert socket to TLS;
+  nested exception is:
+	javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+2020-03-07 14:28:23 INFO  UserDaoImp:34 - method begin-----> saveUser(user) user.idnull
+2020-03-07 14:28:23 INFO  UserDaoImp:41 - user is saved. userId: 5
+2020-03-07 14:28:23 INFO  UserMailController:28 - method begin-----> newUserActivitionMail(toEmail) toEmail : string
+2020-03-07 14:28:23 INFO  UserDaoImp:49 - method begin-----> getUserWithEmail(email) email: string
+2020-03-07 14:28:23 INFO  UserDaoImp:70 - user is found --> id :5
+2020-03-07 14:28:23 INFO  UserMailController:41 - application.properties file setted
+2020-03-07 14:28:23 INFO  UserMailController:46 - mailmessage text : http://localhost:8081/userService/newUserActivition?param=900f4756-a5e1-4698-b668-b39b38b2000a&email=furkankoc18@gmail.com
+2020-03-07 14:28:23 INFO  UserMailController:47 - mail sending...
+2020-03-07 14:28:23 ERROR UserMailController:52 - newUserActivitionMail exception e: org.springframework.mail.MailSendException: Mail server connection failed; nested exception is javax.mail.MessagingException: Could not convert socket to TLS;
+  nested exception is:
+	javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target. Failed messages: javax.mail.MessagingException: Could not convert socket to TLS;
+  nested exception is:
+	javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target; message exceptions (1) are:
+Failed message 1: javax.mail.MessagingException: Could not convert socket to TLS;
+  nested exception is:
+	javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+2020-03-07 14:38:22 INFO  UserApplication:21 - application is running
+2020-03-07 14:40:56 INFO  UserApplication:21 - application is running
+2020-03-07 14:41:30 INFO  UserApplication:21 - application is running
+2020-03-07 14:41:54 INFO  UserApplication:21 - application is running
+2020-03-07 14:42:13 INFO  UserApplication:21 - application is running
+2020-03-07 14:42:59 INFO  UserApplication:21 - application is running
+2020-03-07 14:43:52 INFO  UserApplication:21 - application is running
+2020-03-07 14:44:23 INFO  UserApplication:21 - application is running
+2020-03-07 14:44:27 INFO  UserApplication:21 - application is running
+2020-03-07 14:45:19 INFO  UserApplication:21 - application is running
+2020-03-07 14:45:53 INFO  UserApplication:21 - application is running
+2020-03-07 14:45:57 INFO  UserApplication:21 - application is running
+2020-03-07 14:48:39 INFO  UserApplication:21 - application is running
+2020-03-07 14:48:39 INFO  UserApplication:21 - application is running
+2020-03-07 16:06:49 INFO  UserApplication:21 - application is running
+2020-03-07 16:06:49 INFO  UserApplication:21 - application is running
+2020-03-07 16:08:54 INFO  UserApplication:21 - application is running
+2020-03-07 16:08:54 INFO  UserApplication:21 - application is running
+2020-03-07 18:39:46 INFO  UserApplication:21 - application is running
+2020-03-07 18:39:46 INFO  UserApplication:21 - application is running
+2020-03-07 18:40:40 INFO  UserApplication:21 - application is running
+2020-03-07 18:40:41 INFO  UserApplication:21 - application is running
+2020-03-07 18:42:20 INFO  UserApplication:21 - application is running
+2020-03-07 18:42:20 INFO  UserApplication:21 - application is running
+2020-03-07 18:42:49 INFO  UserApplication:21 - application is running
+2020-03-07 18:42:50 INFO  UserApplication:21 - application is running
+2020-03-07 18:58:03 INFO  UserApplication:21 - application is running
+2020-03-07 18:58:33 INFO  UserApplication:21 - application is running
+2020-03-07 18:59:03 INFO  UserApplication:21 - application is running
+2020-03-07 19:00:53 INFO  UserApplication:21 - application is running
