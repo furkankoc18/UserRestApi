@@ -23,7 +23,7 @@ public class LoginController {
 
 	public LoginResponse userLogin(Login login) {
 		logger.info("method begin-----> userLogin()");
-		Object object = userDao.getUserWithEmail(login.getEmail());
+		Object object = userDao.getUserByEmail(login.getEmail());
 		if (object instanceof User) {
 			User user = (User) object;
 			if (userDao.passwordMatches(user.getPassword(), login.getPassword())) {

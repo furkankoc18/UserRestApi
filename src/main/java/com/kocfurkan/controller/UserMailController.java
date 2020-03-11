@@ -29,7 +29,7 @@ public class UserMailController {
 			SimpleMailMessage mailMessage = new SimpleMailMessage();
 			mailMessage.setTo("furkankoc18@gmail.com");
 			mailMessage.setSubject("User Active Message");
-			Object user = userDaoImp.getUserWithEmail(toEmail);// UUID.randomUUID().toString();
+			Object user = userDaoImp.getUserByEmail(toEmail);// UUID.randomUUID().toString();
 			String token = "";
 			if (user instanceof User) {
 				User user2 = (User) user;

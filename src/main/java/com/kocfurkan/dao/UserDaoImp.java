@@ -41,11 +41,11 @@ public class UserDaoImp implements UserDao {
 		logger.info("user is saved. userId: " + user.getId());
 		userMail.newUserActivitionMail(user.getEmail());
 		System.out.println("user Password" + user.getPassword());
-		return "User Saving Success. User is disabled";
+		return "User Saved Success. User is disabled";
 	}
 
 	@Override
-	public Object getUserWithEmail(String email) {
+	public Object getUserByEmail(String email) {
 		logger.info("method begin-----> getUserWithEmail(email) email: " + email);
 		User findUser = new User();
 		List<User> allUser = (List<User>) userRepository.findAll();
@@ -85,7 +85,7 @@ public class UserDaoImp implements UserDao {
 		if (i == 0) {
 			return false;
 		} else {
-			User user = (User) getUserWithEmail(email);
+			User user = (User) getUserByEmail(email);
 			user.setStatus(true);
 			userRepository.save(user);
 			logger.info("User is active userId :" + user.getId());
@@ -126,12 +126,12 @@ public class UserDaoImp implements UserDao {
 
 	@Override
 	public List<User> getAllUser() {
-		List<User>users=new ArrayList<>();
-		for (Iterator<User> i = userRepository.findAll().iterator(); i.hasNext(); ) {
-		    User user= (User) i.next();
-		    users.add(user);
+		List<User> users = new ArrayList<>();
+		for (Iterator<User> i = userRepository.findAll().iterator(); i.hasNext();) {
+			User user = (User) i.next();
+			users.add(user);
 		}
-		
+
 		return users;
 	}
 
@@ -149,12 +149,6 @@ public class UserDaoImp implements UserDao {
 
 	@Override
 	public User getUserById(Long id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public User getUserByEmail(String email) {
 		// TODO Auto-generated method stub
 		return null;
 	}
