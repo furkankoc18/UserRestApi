@@ -19,8 +19,6 @@ public interface UserDao {
 	Object getUserByEmail(String email);
 	
 	
-	
 	boolean passwordMatches(String encodePassword,String password);
-	
 	List<User>getAllUser();
 }

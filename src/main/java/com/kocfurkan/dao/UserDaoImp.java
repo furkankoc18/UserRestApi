@@ -137,19 +137,27 @@ public class UserDaoImp implements UserDao {
 
 	@Override
 	public String removeUserByEmail(String email) {
-		userRepository.removeByEmail(email);
-		return "silindi";
+		Long isDeleted=userRepository.removeByEmail(email);
+		if(isDeleted==0) {
+			return email+" email kullanici bulunamadı!!";
+		}else {
+			return email+" email kullanici silindi";
+		}
 	}
 
 	@Override
 	public List<User> getUserListByRole(Role role) {
-		// TODO Auto-generated method stub
-		return null;
+		List<User>users=userRepository.getUserListByRole(role.getId());
+		
+		return users;
 	}
 
 	@Override
 	public User getUserById(Long id) {
-		// TODO Auto-generated method stub
+		User user=userRepository.findById(id).get();
+		if(user!=null) {
+			return user;
+		}
 		return null;
 	}
 
