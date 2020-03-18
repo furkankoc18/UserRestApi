@@ -31,73 +31,51 @@ public class UserDaoImp implements UserDao {
 
 	@Override
 	public String saveUser(User user) {
-		logger.info("method begin-----> saveUser(user) user.id" + user.getId());
 		String activitionToken = UUID.randomUUID().toString();
 		user.setActivationToken(activitionToken);
 		user.setStatus(false);
 		user.setPassword(passwordEncoder.encode(user.getPassword()));
 		user.setCreatedDate(new Date());
 		userRepository.save(user);
-		logger.info("user is saved. userId: " + user.getId());
 		userMail.newUserActivitionMail(user.getEmail());
-		System.out.println("user Password" + user.getPassword());
 		return "User Saved Success. User is disabled";
 	}
 
 	@Override
 	public Object getUserByEmail(String email) {
-		logger.info("method begin-----> getUserWithEmail(email) email: " + email);
-		User findUser = new User();
-		List<User> allUser = (List<User>) userRepository.findAll();
-		int i = 0;
-		for (User user : allUser) {
-			if (user.getEmail().equals(email)) {
-				findUser.setStatus(user.isStatus());
-				findUser.setEmail(user.getEmail());
-				findUser.setId(user.getId());
-				findUser.setName(user.getName());
-				findUser.setSurname(user.getSurname());
-				findUser.setRole(user.getRole());
-				findUser.setPassword(user.getPassword());
-				findUser.setActivationToken(user.getActivationToken());
-				i++;
-			}
-		}
-		if (i == 0) {
-			logger.info("user not found");
-			return "Bulunamadi";
-		} else {
-			logger.info("user is found --> id :" + findUser.getId());
-			return findUser;
-		}
+		User user = userRepository.findByEmail(email);
+		if (user != null)
+			return user;
+		else
+			return "bulunamadı";
 	}
 
 	@Override
 	public boolean isActivation(String token, String email) {
-		logger.info("method begin-----> isActivation(token,email) email: " + email);
-		List<User> allUser = (List<User>) userRepository.findAll();
-		int i = 0;
-		for (User user : allUser) {
-			if (user.getEmail().equals(email) && user.getActivationToken().equals(token)) {
-				i++;
+		User user = userRepository.findByEmail(email);
+		if (user != null) {
+			if (user.getActivationToken().equals(token)) {
+				user.setStatus(true);
+				userRepository.save(user);
+				return true;
+			} else {
+				return false;
 			}
-		}
-		if (i == 0) {
-			return false;
 		} else {
-			User user = (User) getUserByEmail(email);
-			user.setStatus(true);
-			userRepository.save(user);
-			logger.info("User is active userId :" + user.getId());
-			return true;
+			return false;
 		}
+		/*
+		 * List<User> allUser = (List<User>) userRepository.findAll(); int i = 0; for
+		 * (User user : allUser) { if (user.getEmail().equals(email) &&
+		 * user.getActivationToken().equals(token)) { i++; } } if (i == 0) { return
+		 * false; } else { User user = (User) getUserByEmail(email);
+		 * user.setStatus(true); userRepository.save(user); return true; }
+		 */
 	}
 
 	@Override
 	public String removeUserById(Long userId) {
-		logger.info("method begin-----> removeUser(userId) userId: " + userId);
 		boolean isUserExists = userRepository.existsById(userId);
-		logger.info("isUserExists : " + isUserExists);
 		long userCount = userRepository.count();
 		if (isUserExists) {
 			User user = userRepository.findById(userId).get();
@@ -137,26 +115,31 @@ public class UserDaoImp implements UserDao {
 
 	@Override
 	public String removeUserByEmail(String email) {
-		Long isDeleted=userRepository.removeByEmail(email);
-		if(isDeleted==0) {
-			return email+" email kullanici bulunamadı!!";
-		}else {
-			return email+" email kullanici silindi";
+		Long isDeleted = userRepository.removeByEmail(email);
+		if (isDeleted == 0) {
+			return email + " email kullanici bulunamadı!!";
+		} else {
+			return email + " email kullanici silindi";
 		}
 	}
 
 	@Override
 	public List<User> getUserListByRole(Role role) {
-		List<User>users=userRepository.getUserListByRole(role.getId());
-		
+		List<User> users = userRepository.getUserListByRole(role.getId());
+
 		return users;
 	}
 
 	@Override
 	public User getUserById(Long id) {
-		User user=userRepository.findById(id).get();
-		if(user!=null) {
-			return user;
+
+		try {
+			User user = userRepository.findById(id).get();
+			if (user != null) {
+				return user;
+			}
+		} catch (Exception e) {
+
 		}
 		return null;
 	}
