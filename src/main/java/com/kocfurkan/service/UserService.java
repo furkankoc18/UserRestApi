@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.kocfurkan.dao.UserDao;
 import com.kocfurkan.dao.UserDaoImp;
 import com.kocfurkan.entity.Role;
 import com.kocfurkan.entity.User;
@@ -27,7 +29,7 @@ import io.swagger.annotations.ApiResponses;
 public class UserService {
 
 	@Autowired
-	UserDaoImp userDao;
+	UserDao userDao;
 
 	@ResponseBody
 	@RequestMapping(method = RequestMethod.POST, value = "/saveUser", consumes = "application/json")
@@ -72,7 +74,7 @@ public class UserService {
 			@ApiResponse(code = 403, message = "Users return is forbidden"),
 			@ApiResponse(code = 404, message = "getAllUser endpoint isn't found"), })
 	public ResponseEntity<List<User>> getAllUser() {
-		return ResponseEntity.ok(userDao.getAllUser());
+		return ResponseEntity.ok(userDao.getAllUsers());
 	}
 
 	@RequestMapping(method = RequestMethod.GET, value = "/getUserByEmail")

@@ -1,4 +1,4 @@
-package com.kocfurkan.main;
+package com.kocfurkan;
 
 import org.apache.log4j.Logger;
 import org.springframework.boot.SpringApplication;

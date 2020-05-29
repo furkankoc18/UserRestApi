@@ -18,7 +18,7 @@ public interface UserRepository extends CrudRepository<User, Long> {
 
 	@Query(value = "select * from users  where role_id = :id", nativeQuery = true)
 	List<User> getUserListByRole(@Param("id") Long id);
-	
+
 	User findByEmail(String email);
 
 }

@@ -11,14 +11,20 @@ import com.kocfurkan.entity.User;
 public interface UserDao {
 
 	String saveUser(User user);
-	boolean isActivation(String token,String email);
+
+	boolean isActivation(String token, String email);
+
 	String removeUserById(Long userId);
+
 	String removeUserByEmail(String email);
-	List<User>getUserListByRole(Role role);
+
+	List<User> getUserListByRole(Role role);
+
 	User getUserById(Long id);
+
 	Object getUserByEmail(String email);
-	
-	
-	boolean passwordMatches(String encodePassword,String password);
-	List<User>getAllUser();
+
+	boolean passwordMatches(String encodePassword, String password);
+
+	List<User> getAllUsers();
 }

@@ -24,18 +24,21 @@ public class UserDaoImp implements UserDao {
 
 	@Autowired
 	private UserRepository userRepository;
+	
 	@Autowired
 	private UserMailController userMail;
+	
 	@Autowired
 	private PasswordEncoder passwordEncoder;
 
+	
 	@Override
 	public String saveUser(User user) {
 		String activitionToken = UUID.randomUUID().toString();
-		user.setActivationToken(activitionToken);
-		user.setStatus(false);
-		user.setPassword(passwordEncoder.encode(user.getPassword()));
-		user.setCreatedDate(new Date());
+			user.setActivationToken(activitionToken);
+			user.setStatus(false);
+			user.setPassword(passwordEncoder.encode(user.getPassword()));
+			user.setCreatedDate(new Date());
 		userRepository.save(user);
 		userMail.newUserActivitionMail(user.getEmail());
 		return "User Saved Success. User is disabled";
@@ -64,13 +67,6 @@ public class UserDaoImp implements UserDao {
 		} else {
 			return false;
 		}
-		/*
-		 * List<User> allUser = (List<User>) userRepository.findAll(); int i = 0; for
-		 * (User user : allUser) { if (user.getEmail().equals(email) &&
-		 * user.getActivationToken().equals(token)) { i++; } } if (i == 0) { return
-		 * false; } else { User user = (User) getUserByEmail(email);
-		 * user.setStatus(true); userRepository.save(user); return true; }
-		 */
 	}
 
 	@Override
@@ -103,13 +99,12 @@ public class UserDaoImp implements UserDao {
 	}
 
 	@Override
-	public List<User> getAllUser() {
+	public List<User> getAllUsers() {
 		List<User> users = new ArrayList<>();
 		for (Iterator<User> i = userRepository.findAll().iterator(); i.hasNext();) {
 			User user = (User) i.next();
 			users.add(user);
 		}
-
 		return users;
 	}
 
@@ -126,20 +121,18 @@ public class UserDaoImp implements UserDao {
 	@Override
 	public List<User> getUserListByRole(Role role) {
 		List<User> users = userRepository.getUserListByRole(role.getId());
-
 		return users;
 	}
 
 	@Override
 	public User getUserById(Long id) {
-
 		try {
 			User user = userRepository.findById(id).get();
 			if (user != null) {
 				return user;
 			}
 		} catch (Exception e) {
-
+			System.out.println("getUserById exception => "+e.toString());
 		}
 		return null;
 	}

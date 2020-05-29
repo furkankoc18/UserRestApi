@@ -22,32 +22,26 @@ public class LoginController {
 	private UserDao userDao;
 
 	public LoginResponse userLogin(Login login) {
-		logger.info("method begin-----> userLogin()");
 		Object object = userDao.getUserByEmail(login.getEmail());
 		if (object instanceof User) {
 			User user = (User) object;
 			if (userDao.passwordMatches(user.getPassword(), login.getPassword())) {
 				if (user.isStatus()) {
 					logger.info("user logged in userEmail: " + login.getEmail());
-
 					Algorithm algorithm = Algorithm.HMAC256("secret");
 					String token = JWT.create().withIssuer(login.getEmail()).withSubject("userLogin")
 							.withClaim("email", login.getEmail()).withClaim("password", login.getPassword())
 							.withIssuedAt(new Date()).sign(algorithm);
-					logger.info("User email : "+login.getEmail()+" Token : "+token);
 					return new LoginResponse(true, token);
 				} else {
-					logger.info("login failed user not active  userEmail: " + login.getEmail());
 					return new LoginResponse(false, "login failed user not active");
 				}
 
 			} else {
-				logger.info("login failed password userEmail: " + login.getEmail());
 				return new LoginResponse(false, "login faied password");
 			}
 
 		} else {
-			logger.info("login failed userEmail: " + login.getEmail());
 			return new LoginResponse(false, "login failed");
 		}
 	}
