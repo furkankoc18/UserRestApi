@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import java.util.UUID;
+import java.util.regex.Pattern;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,13 +36,23 @@ public class UserDaoImp implements UserDao {
 	@Override
 	public String saveUser(User user) {
 		String activitionToken = UUID.randomUUID().toString();
-			user.setActivationToken(activitionToken);
+		String regex = "^[\\w!#$%&'*+/=?`{|}~^-]+(?:\\.[\\w!#$%&'*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$";
+		Pattern pattern = Pattern.compile(regex);
+	    String responseMessage="";
+		if(user.getEmail().isEmpty()) {
+	    	responseMessage="User not saved! User email is empty!!";
+	    }else if(!pattern.matcher(user.getEmail()).matches()) {
+	    	responseMessage="User email is not validate!!";
+	    }else {
+	    	user.setActivationToken(activitionToken);
 			user.setStatus(false);
 			user.setPassword(passwordEncoder.encode(user.getPassword()));
 			user.setCreatedDate(new Date());
 		userRepository.save(user);
 		userMail.newUserActivitionMail(user.getEmail());
-		return "User Saved Success. User is disabled";
+		responseMessage="User Saved Success. User is disabled";
+	    }
+		return responseMessage;
 	}
 
 	@Override

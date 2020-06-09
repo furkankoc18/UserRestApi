@@ -4,20 +4,15 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.kocfurkan.dao.UserDao;
-import com.kocfurkan.dao.UserDaoImp;
 import com.kocfurkan.entity.Role;
 import com.kocfurkan.entity.User;
-import com.sun.mail.iap.Response;
-
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
@@ -38,7 +33,7 @@ public class UserService {
 			@ApiResponse(code = 401, message = "User save is unauthorized"),
 			@ApiResponse(code = 403, message = "User save is forbidden"),
 			@ApiResponse(code = 404, message = "saveUser endpoint isn't found"), })
-	public ResponseEntity<String> saveUser(@RequestBody User user) {
+	public ResponseEntity<String> saveUser(@RequestBody(required = true) User user) {
 		return ResponseEntity.ok(userDao.saveUser(user));
 	}
 
